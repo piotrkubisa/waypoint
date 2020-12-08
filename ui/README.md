@@ -39,8 +39,20 @@ at `https://localhost:9702`. If you need to make any API changes to go along
 with frontend changes, or just wish to run the server locally, you can follow
 the instructions to run [Waypoint server locally](https://www.waypointproject.io/docs/server/run).
 
+To run a new local build with the frontend, do the following: 
+
+- build the app
+`make docker/evanphx`
+
+- remove the existing waypoint server
+`docker stop waypoint-server; docker rm waypoint-server; docker volume prune -f`
+
+- start the new one
+`waypoint install -platform=docker -server-image=waypoint -accept-tos`
+
+
 Note: You'll need to visit the above address in the same browser session to
-accept the invalid certificate warning in your browser for this to work.
+accept the invalid certificate warning in your browser for this to work. Run the authentication steps first with that address, before opening the development Ember app. 
 
 - `ember serve local`
 - The app will be available at [http://localhost:4200](http://localhost:4200).
