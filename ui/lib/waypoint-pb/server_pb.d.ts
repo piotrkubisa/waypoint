@@ -6,6 +6,11 @@ import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/t
 import * as google_rpc_status_pb from 'api-common-protos/google/rpc/status_pb';
 
 
+
+
+
+
+
 export class GetVersionInfoResponse extends jspb.Message {
   getInfo(): VersionInfo | undefined;
   setInfo(value?: VersionInfo): GetVersionInfoResponse;
@@ -316,7 +321,7 @@ export namespace Ref {
       sequence?: Ref.OperationSeq.AsObject,
     }
 
-    export enum TargetCase { 
+    export enum TargetCase {
       TARGET_NOT_SET = 0,
       ID = 1,
       SEQUENCE = 2,
@@ -376,7 +381,7 @@ export namespace Ref {
       id?: Ref.RunnerId.AsObject,
     }
 
-    export enum TargetCase { 
+    export enum TargetCase {
       TARGET_NOT_SET = 0,
       ANY = 1,
       ID = 2,
@@ -440,7 +445,7 @@ export namespace Component {
     name: string,
   }
 
-  export enum Type { 
+  export enum Type {
     UNKNOWN = 0,
     BUILDER = 1,
     REGISTRY = 2,
@@ -488,7 +493,7 @@ export namespace Status {
     completeTime?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
 
-  export enum State { 
+  export enum State {
     UNKNOWN = 0,
     RUNNING = 1,
     SUCCESS = 2,
@@ -534,7 +539,7 @@ export namespace StatusFilter {
       state: Status.State,
     }
 
-    export enum FilterCase { 
+    export enum FilterCase {
       FILTER_NOT_SET = 0,
       STATE = 2,
     }
@@ -555,7 +560,7 @@ export namespace Operation {
   export type AsObject = {
   }
 
-  export enum PhysicalState { 
+  export enum PhysicalState {
     UNKNOWN = 0,
     PENDING = 1,
     CREATED = 3,
@@ -588,7 +593,7 @@ export namespace OperationOrder {
     limit: number,
   }
 
-  export enum Order { 
+  export enum Order {
     UNSET = 0,
     START_TIME = 1,
     COMPLETE_TIME = 2,
@@ -954,7 +959,7 @@ export namespace Job {
       git?: Job.Git.AsObject,
     }
 
-    export enum SourceCase { 
+    export enum SourceCase {
       SOURCE_NOT_SET = 0,
       LOCAL = 1,
       GIT = 2,
@@ -1297,7 +1302,7 @@ export namespace Job {
       deployment?: Deployment.AsObject,
     }
 
-    export enum TargetCase { 
+    export enum TargetCase {
       TARGET_NOT_SET = 0,
       WORKSPACE = 1,
       DEPLOYMENT = 2,
@@ -1414,7 +1419,7 @@ export namespace Job {
   }
 
 
-  export enum State { 
+  export enum State {
     UNKNOWN = 0,
     QUEUED = 1,
     WAITING = 2,
@@ -1423,7 +1428,7 @@ export namespace Job {
     SUCCESS = 5,
   }
 
-  export enum OperationCase { 
+  export enum OperationCase {
     OPERATION_NOT_SET = 0,
     NOOP = 50,
     BUILD = 51,
@@ -2042,7 +2047,7 @@ export namespace GetJobStreamResponse {
       }
 
 
-      export enum EventCase { 
+      export enum EventCase {
         EVENT_NOT_SET = 0,
         LINE = 2,
         STATUS = 3,
@@ -2105,7 +2110,7 @@ export namespace GetJobStreamResponse {
   }
 
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     OPEN = 1,
     STATE = 2,
@@ -2185,7 +2190,7 @@ export namespace RunnerConfigRequest {
   }
 
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     OPEN = 1,
   }
@@ -2373,7 +2378,7 @@ export namespace RunnerJobStreamRequest {
   }
 
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     REQUEST = 1,
     ACK = 2,
@@ -2451,7 +2456,7 @@ export namespace RunnerJobStreamResponse {
   }
 
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     ASSIGNMENT = 1,
     CANCEL = 2,
@@ -2751,7 +2756,7 @@ export namespace Hostname {
       application?: Hostname.TargetApp.AsObject,
     }
 
-    export enum TargetCase { 
+    export enum TargetCase {
       TARGET_NOT_SET = 0,
       APPLICATION = 20,
     }
@@ -3485,7 +3490,7 @@ export namespace UpsertDeploymentRequest {
     autoHostname: UpsertDeploymentRequest.Tristate,
   }
 
-  export enum Tristate { 
+  export enum Tristate {
     UNSET = 0,
     TRUE = 1,
     FALSE = 2,
@@ -3692,7 +3697,7 @@ export namespace Deployment {
   }
 
 
-  export enum LoadDetails { 
+  export enum LoadDetails {
     NONE = 0,
     ARTIFACT = 1,
     BUILD = 2,
@@ -3751,7 +3756,7 @@ export namespace ListInstancesRequest {
   }
 
 
-  export enum ScopeCase { 
+  export enum ScopeCase {
     SCOPE_NOT_SET = 0,
     DEPLOYMENT_ID = 1,
     APPLICATION = 2,
@@ -4088,7 +4093,7 @@ export namespace Release {
   }
 
 
-  export enum LoadDetails { 
+  export enum LoadDetails {
     NONE = 0,
     DEPLOYMENT = 1,
     ARTIFACT = 2,
@@ -4152,7 +4157,7 @@ export namespace GetLogStreamRequest {
   }
 
 
-  export enum ScopeCase { 
+  export enum ScopeCase {
     SCOPE_NOT_SET = 0,
     DEPLOYMENT_ID = 1,
     APPLICATION = 2,
@@ -4253,7 +4258,7 @@ export namespace ConfigVar {
     value: string,
   }
 
-  export enum ScopeCase { 
+  export enum ScopeCase {
     SCOPE_NOT_SET = 0,
     APPLICATION = 3,
     PROJECT = 4,
@@ -4332,7 +4337,7 @@ export namespace ConfigGetRequest {
     prefix: string,
   }
 
-  export enum ScopeCase { 
+  export enum ScopeCase {
     SCOPE_NOT_SET = 0,
     APPLICATION = 2,
     PROJECT = 3,
@@ -4511,7 +4516,7 @@ export namespace ExecStreamRequest {
   }
 
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     START = 1,
     INPUT = 2,
@@ -4610,7 +4615,7 @@ export namespace ExecStreamResponse {
       data: Uint8Array | string,
     }
 
-    export enum Channel { 
+    export enum Channel {
       UNKNOWN = 0,
       STDOUT = 1,
       STDERR = 2,
@@ -4618,7 +4623,7 @@ export namespace ExecStreamResponse {
   }
 
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     OPEN = 3,
     OUTPUT = 1,
@@ -4886,7 +4891,7 @@ export namespace EntrypointExecRequest {
       data: Uint8Array | string,
     }
 
-    export enum Channel { 
+    export enum Channel {
       UNKNOWN = 0,
       STDOUT = 1,
       STDERR = 2,
@@ -4915,7 +4920,7 @@ export namespace EntrypointExecRequest {
   }
 
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     OPEN = 1,
     EXIT = 2,
@@ -4961,7 +4966,7 @@ export namespace EntrypointExecResponse {
     opened: boolean,
   }
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     INPUT = 1,
     INPUT_EOF = 4,
@@ -5193,7 +5198,7 @@ export namespace CreateSnapshotResponse {
   }
 
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     OPEN = 1,
     CHUNK = 2,
@@ -5246,7 +5251,7 @@ export namespace RestoreSnapshotRequest {
   }
 
 
-  export enum EventCase { 
+  export enum EventCase {
     EVENT_NOT_SET = 0,
     OPEN = 1,
     CHUNK = 2,
@@ -5289,7 +5294,7 @@ export namespace Snapshot {
       format: Snapshot.Header.Format,
     }
 
-    export enum Format { 
+    export enum Format {
       UNKNOWN = 0,
       BOLT = 1,
     }
@@ -5315,7 +5320,7 @@ export namespace Snapshot {
       sha256: string,
     }
 
-    export enum ChecksumCase { 
+    export enum ChecksumCase {
       CHECKSUM_NOT_SET = 0,
       SHA256 = 1,
     }
