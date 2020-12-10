@@ -24,6 +24,7 @@ export default class App extends Route {
 
   breadcrumbs(model: AppRouteModel) {
     if (!model) return [];
+    // Comment
     return [
       {
         label: model.application.project!,
