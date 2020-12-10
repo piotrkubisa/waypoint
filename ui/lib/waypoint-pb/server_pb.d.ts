@@ -6,11 +6,6 @@ import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/t
 import * as google_rpc_status_pb from 'api-common-protos/google/rpc/status_pb';
 
 
-
-
-
-
-
 export class GetVersionInfoResponse extends jspb.Message {
   getInfo(): VersionInfo | undefined;
   setInfo(value?: VersionInfo): GetVersionInfoResponse;
